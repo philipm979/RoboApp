@@ -4,15 +4,14 @@ import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import './App.css';
 
-
 class App extends Component {
     constructor () {
         super ()
         this.state ={
             robots: [],
             searchfield: '',
-            color: '#0ccac4'
-         }
+            color: ''
+           }
     }
 
     componentDidMount () {
@@ -39,14 +38,17 @@ class App extends Component {
         }
         else {
         return (   
-        <div className = 'tc' style = {{background: this.state.color}}>
+        <div className = 'tc' style = {{backgroundColor: this.state.color}}>
+        <button className='pa3 bg-red' onClick = {this.colorChange}></button>
+        
             <h1 className = 'f1'>RoboFriends</h1>
             <SearchBox searchChange={this.onSearchChange}/>
             <Scroll>
-                <CardList robots={filteredRobots}
-                    colorChange={this.colorChange}
+                <CardList 
+                robots={filteredRobots}
                 />
             </Scroll>
+        
         </div>
             );
         }
