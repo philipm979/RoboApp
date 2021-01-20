@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/RoboApp/static/css/main.fcdeeb4a.chunk.css",
-    "main.js": "/RoboApp/static/js/main.24c2e7f6.chunk.js",
-    "main.js.map": "/RoboApp/static/js/main.24c2e7f6.chunk.js.map",
+    "main.js": "/RoboApp/static/js/main.5e4996b1.chunk.js",
+    "main.js.map": "/RoboApp/static/js/main.5e4996b1.chunk.js.map",
     "runtime-main.js": "/RoboApp/static/js/runtime-main.fc109132.js",
     "runtime-main.js.map": "/RoboApp/static/js/runtime-main.fc109132.js.map",
     "static/css/2.31461e4f.chunk.css": "/RoboApp/static/css/2.31461e4f.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.31461e4f.chunk.css",
     "static/js/2.dba7a7b0.chunk.js",
     "static/css/main.fcdeeb4a.chunk.css",
-    "static/js/main.24c2e7f6.chunk.js"
+    "static/js/main.5e4996b1.chunk.js"
   ]
 }
