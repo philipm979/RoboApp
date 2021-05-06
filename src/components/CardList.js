@@ -16,8 +16,10 @@ return (
                 colorChange = {colorChange}
                 />
             );
-        })
+        })              
     }
 </div>
 )}
 export default CardList; 
+
+// Cards Array
