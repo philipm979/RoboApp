@@ -33,7 +33,7 @@ function App () {
         else {
             return (   
             <div className = 'tc' style = {{backgroundColor: color}}>
-            <button className='pa3 bg-red' onClick = {() => setColor('red')}></button>
+            <button className='pa3 bg-yellow' onClick = {() => setColor('yellow')}></button>
             <h1 className = 'f1'>RoboFriends</h1>
                 <SearchBox searchChange={onSearchChange}/>
                 <Scroll>
