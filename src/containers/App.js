@@ -11,6 +11,7 @@ function App () {
     const [searchfield, setSearchfield] = useState('')
     const [color, setColor] = useState('')
     
+    
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response=> response.json())
@@ -27,7 +28,6 @@ function App () {
         return robot.name.toLowerCase().includes(searchfield.toLowerCase());
         })
         if (robots.length === 0) {
-            console.log(robots, searchfield)
             return <h1>Loading</h1>
           }
         else {
