@@ -9,7 +9,7 @@ function App () {
 
     const [robots, setRobots] = useState([])
     const [searchfield, setSearchfield] = useState('')
-    const [color, setColor] = useState('')
+    const [on, setOn] = useState(false)
     
     
     useEffect(() => {
@@ -21,8 +21,9 @@ function App () {
     const onSearchChange = (event) => {
        setSearchfield(event.target.value)
     }
- 
-   
+
+    const changeColor = () => setOn(on => !on);
+
 
     const filteredRobots = robots.filter(robot => {
         return robot.name.toLowerCase().includes(searchfield.toLowerCase());
@@ -32,20 +33,18 @@ function App () {
           }
         else {
             return (   
-            <div className = 'tc' style = {{backgroundColor: color}}>
-            <button className='pa3 bg-yellow' onClick = {() => setColor('yellow')}></button>
-            <h1 className = 'f1'>RoboFriends</h1>
-                <SearchBox searchChange={onSearchChange}/>
-                <Scroll>
-                    <CardList 
-                    robots={filteredRobots}
-                    />
-                    
-            
-                </Scroll>
-                
-            
-            </div>
+            <div className ='tc'>
+                <body className = {on ? "color-change" : "original-color"}>
+                    <button className='pa3 bg-yellow' onClick = {changeColor}></button>
+                    <h1 className = 'f1'>RoboFriends</h1>
+                    <SearchBox searchChange={onSearchChange}/>
+                    <Scroll>
+                        <CardList 
+                        robots={filteredRobots}
+                            />
+                    </Scroll>
+                </body>
+             </div>
             );
         }
     }
